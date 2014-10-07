@@ -1,0 +1,38 @@
+{
+  "name": "hubot-loggly-slack",
+  "description": "Hubot script for loggly to emit slack attachment",
+  "version": "0.0.6",
+  "author": "Kenan Shifflett <kenan.shifflett@gmail.com>",
+  "license": "MIT",
+
+  "keywords": [
+    "hubot",
+    "hubot-scripts"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/spanishdict/hubot-loggly-slack.git"
+  },
+
+  "bugs": {
+    "url": "https://github.com/spanishdict/hubot-loggly-slack/issues"
+  },
+
+  "dependencies": {
+    "coffee-script": "~1.7"
+  },
+
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*"
+  },
+
+  "main": "index.coffee",
+
+  "scripts": {
+    "test": "script/test"
+  }
+}
