@@ -23,10 +23,10 @@ module.exports = (robot) ->
 
   middleware = bodyParser.json type: 'text/plain'
 
-  robot.router.get '/hubot/loggly-slack/:room', middleware, (req, res) ->
+  robot.router.post '/hubot/loggly-slack/:room', middleware, (req, res) ->
     room = req.params.room
 
-    data = req.data
+    data = req.body
 
     # Example post data
     #
