@@ -17,11 +17,16 @@
 #     The POST method will post as text/plain and not be parsed properly.
 #
 
+bodyParser = require 'body-parser'
+
 module.exports = (robot) ->
-  robot.router.get '/hubot/loggly-slack/:room', (req, res) ->
+
+  middleware = bodyParser.json type: 'text/plain'
+
+  robot.router.get '/hubot/loggly-slack/:room', middleware, (req, res) ->
     room = req.params.room
 
-    data = req.query
+    data = req.data
 
     # Example post data
     #
