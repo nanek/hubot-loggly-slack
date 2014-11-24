@@ -21,7 +21,14 @@ bodyParser = require 'body-parser'
 
 module.exports = (robot) ->
 
-  middleware = bodyParser.json type: 'text/plain'
+  parser = bodyParser.json type: 'text/plain'
+
+  removeCharset = (req, res, next) ->
+    # Remove ISO-8859-1 charset as it is not supported by bodyParser.
+    req.headers['content-type'] = 'text/plain'
+    next()
+
+  middleware = [removeCharset, parser]
 
   robot.router.post '/hubot/loggly-slack/:room', middleware, (req, res) ->
     room = req.params.room
