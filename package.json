@@ -1,13 +1,15 @@
 {
   "name": "hubot-loggly-slack",
   "description": "Hubot script for loggly to emit slack attachment",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "author": "Kenan Shifflett <kenan.shifflett@gmail.com>",
   "license": "MIT",
 
   "keywords": [
     "hubot",
-    "hubot-scripts"
+    "hubot-scripts",
+    "loggly",
+    "slack"
   ],
 
   "repository": {

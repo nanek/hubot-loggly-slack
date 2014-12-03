@@ -54,15 +54,15 @@ module.exports = (robot) ->
 
     fields = [
         title: data.alert_name
+        value: data.source_group + ': ' + data.query
+        short: true
+      ,
+        title: 'Hits'
+        value: data.num_hits
+        short: true
+    ,
+        title: 'Link'
         value: data.search_link
-        short: true
-      ,
-        title: "Time"
-        value: "#{data.start_time} to #{data.end_time}"
-        short: true
-      ,
-        title: "Hits #{data.num_hits}"
-        value: data.query
         short: false
     ]
 
